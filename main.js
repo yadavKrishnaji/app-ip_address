@@ -13,7 +13,36 @@ const IPCIDR = require('ip-cidr');
  * @param {callback} callback - A callback function.
  * @return {string} (firstIpAddress) - An IPv4 address.
  */
-function getFirstIpAddress(cidrStr, callback) {
+
+
+
+/**
+ * Calculates an IPv4-mapped IPv6 address.
+ * @param {string} ipv4 - An IPv4 address in dotted-quad format.
+ * @return {*} (ipv6Address) - An IPv6 address string or null if a run-time problem was detected.
+ */
+
+
+
+
+/*
+  This section is used to test function and log any errors.
+  We will make several positive and negative tests.
+*/
+/*
+  This section is used to test function and log any errors.
+  We will make several positive and negative tests.
+*/
+class IpAddress {
+  constructor() {
+    // IAP's global log object is used to output errors, warnings, and other
+    // information to the console, IAP's log files, or a Syslog server.
+    // For more information, consult the Log Class guide on the Itential
+    // Developer Hub https://developer.itential.io/ located
+    // under Documentation -> Developer Guides -> Log Class Guide
+    log.info('Starting the IpAddress product.');
+  }
+  getFirstIpAddress(cidrStr, callback) {
 
   // Initialize return arguments for callback
   let firstIpAddress = null;
@@ -44,34 +73,6 @@ function getFirstIpAddress(cidrStr, callback) {
   // data as the second argument to the callback function.
   return callback(firstIpAddress, callbackError);
 }
-
-
-/**
- * Calculates an IPv4-mapped IPv6 address.
- * @param {string} ipv4 - An IPv4 address in dotted-quad format.
- * @return {*} (ipv6Address) - An IPv6 address string or null if a run-time problem was detected.
- */
-
-
-
-
-/*
-  This section is used to test function and log any errors.
-  We will make several positive and negative tests.
-*/
-/*
-  This section is used to test function and log any errors.
-  We will make several positive and negative tests.
-*/
-class IpAddress {
-  constructor() {
-    // IAP's global log object is used to output errors, warnings, and other
-    // information to the console, IAP's log files, or a Syslog server.
-    // For more information, consult the Log Class guide on the Itential
-    // Developer Hub https://developer.itential.io/ located
-    // under Documentation -> Developer Guides -> Log Class Guide
-    log.info('Starting the IpAddress product.');
-  }
 }
 
 /*
